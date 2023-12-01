@@ -18,12 +18,6 @@ namespace autoecoleEF
             InitializeComponent();
             this.mesDonneesEF = new autoEcoleEntities();
         }
-
-        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void gérerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmGererEleve f = new FrmGererEleve(this.mesDonneesEF);
@@ -38,26 +32,35 @@ namespace autoecoleEF
             f.Show();
         }
 
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void listeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmGererVehicule f = new FrmGererVehicule(this.mesDonneesEF);
+            FrmListeVehicule f = new FrmListeVehicule(this.mesDonneesEF);
             f.MdiParent = this;
             f.Show();
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmAjouterLecon f = new FrmAjouterLecon(this.mesDonneesEF);
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void validerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void FrmMenu_Load(object sender, EventArgs e)
-        {
-
+            FrmValiderLecon f = new FrmValiderLecon(this.mesDonneesEF);
+            f.MdiParent = this;
+            f.Show();
         }
     }
 }

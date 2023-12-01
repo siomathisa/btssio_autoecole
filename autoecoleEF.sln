@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "autoecoleEF", "autoecoleEF\autoecoleEF.csproj", "{4F474030-DED1-4AD8-9539-CEA0C3810955}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F474030-DED1-4AD8-9539-CEA0C3810955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F474030-DED1-4AD8-9539-CEA0C3810955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F474030-DED1-4AD8-9539-CEA0C3810955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F474030-DED1-4AD8-9539-CEA0C3810955}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9A0E9F3-DCE5-49AA-B74B-35C66E5BF494}
+	EndGlobalSection
+EndGlobal

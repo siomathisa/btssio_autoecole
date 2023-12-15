@@ -37,7 +37,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNum = new System.Windows.Forms.TextBox();
-            this.bdgSourceEleve = new System.Windows.Forms.BindingSource(this.components);
             this.txtNom = new System.Windows.Forms.TextBox();
             this.txtPrenom = new System.Windows.Forms.TextBox();
             this.txtAdresse = new System.Windows.Forms.TextBox();
@@ -56,15 +55,16 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).BeginInit();
+            this.bdgSourceEleve = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bdgNav)).BeginInit();
             this.bdgNav.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(162, 74);
+            this.label1.Location = new System.Drawing.Point(273, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 0;
@@ -73,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 104);
+            this.label2.Location = new System.Drawing.Point(288, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 1;
@@ -82,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(163, 126);
+            this.label3.Location = new System.Drawing.Point(274, 180);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 2;
@@ -91,7 +91,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(161, 149);
+            this.label4.Location = new System.Drawing.Point(272, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 3;
@@ -100,7 +100,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(118, 175);
+            this.label5.Location = new System.Drawing.Point(229, 229);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 13);
             this.label5.TabIndex = 4;
@@ -109,7 +109,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(137, 204);
+            this.label6.Location = new System.Drawing.Point(248, 258);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 13);
             this.label6.TabIndex = 5;
@@ -118,20 +118,16 @@
             // txtNum
             // 
             this.txtNum.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceEleve, "id", true));
-            this.txtNum.Location = new System.Drawing.Point(218, 71);
+            this.txtNum.Location = new System.Drawing.Point(329, 125);
             this.txtNum.Name = "txtNum";
             this.txtNum.ReadOnly = true;
             this.txtNum.Size = new System.Drawing.Size(100, 20);
             this.txtNum.TabIndex = 6;
             // 
-            // bdgSourceEleve
-            // 
-            this.bdgSourceEleve.DataSource = typeof(autoecoleEF.eleve);
-            // 
             // txtNom
             // 
             this.txtNom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceEleve, "nom", true));
-            this.txtNom.Location = new System.Drawing.Point(218, 97);
+            this.txtNom.Location = new System.Drawing.Point(329, 151);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(100, 20);
             this.txtNom.TabIndex = 7;
@@ -139,7 +135,7 @@
             // txtPrenom
             // 
             this.txtPrenom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceEleve, "prenom", true));
-            this.txtPrenom.Location = new System.Drawing.Point(218, 123);
+            this.txtPrenom.Location = new System.Drawing.Point(329, 177);
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(100, 20);
             this.txtPrenom.TabIndex = 8;
@@ -147,7 +143,7 @@
             // txtAdresse
             // 
             this.txtAdresse.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceEleve, "adresse", true));
-            this.txtAdresse.Location = new System.Drawing.Point(218, 149);
+            this.txtAdresse.Location = new System.Drawing.Point(329, 203);
             this.txtAdresse.Name = "txtAdresse";
             this.txtAdresse.Size = new System.Drawing.Size(151, 20);
             this.txtAdresse.TabIndex = 10;
@@ -155,7 +151,7 @@
             // dtInscription
             // 
             this.dtInscription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceEleve, "dateInscription", true));
-            this.dtInscription.Location = new System.Drawing.Point(218, 175);
+            this.dtInscription.Location = new System.Drawing.Point(329, 229);
             this.dtInscription.Name = "dtInscription";
             this.dtInscription.Size = new System.Drawing.Size(200, 20);
             this.dtInscription.TabIndex = 11;
@@ -164,7 +160,7 @@
             // 
             this.cmbCredit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceEleve, "creditHoraire", true));
             this.cmbCredit.FormattingEnabled = true;
-            this.cmbCredit.Location = new System.Drawing.Point(218, 201);
+            this.cmbCredit.Location = new System.Drawing.Point(329, 255);
             this.cmbCredit.Name = "cmbCredit";
             this.cmbCredit.Size = new System.Drawing.Size(131, 21);
             this.cmbCredit.TabIndex = 12;
@@ -172,6 +168,7 @@
             // bdgNav
             // 
             this.bdgNav.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bdgNav.BackColor = System.Drawing.Color.LightSteelBlue;
             this.bdgNav.BindingSource = this.bdgSourceEleve;
             this.bdgNav.CountItem = this.bindingNavigatorCountItem;
             this.bdgNav.DeleteItem = null;
@@ -195,7 +192,7 @@
             this.bdgNav.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bdgNav.Name = "bdgNav";
             this.bdgNav.PositionItem = this.bindingNavigatorPositionItem;
-            this.bdgNav.Size = new System.Drawing.Size(800, 25);
+            this.bdgNav.Size = new System.Drawing.Size(784, 25);
             this.bdgNav.TabIndex = 16;
             this.bdgNav.Text = "bindingNavigator1";
             // 
@@ -297,11 +294,16 @@
             this.toolStripButton1.Text = "Enregistrer";
             this.toolStripButton1.Click += new System.EventHandler(this.Enregistrer_Click);
             // 
+            // bdgSourceEleve
+            // 
+            this.bdgSourceEleve.DataSource = typeof(autoecoleEF.eleve);
+            // 
             // FrmGererEleve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.bdgNav);
             this.Controls.Add(this.cmbCredit);
             this.Controls.Add(this.dtInscription);
@@ -316,12 +318,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmGererEleve";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "0.";
             this.Load += new System.EventHandler(this.FrmGererEleve_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgNav)).EndInit();
             this.bdgNav.ResumeLayout(false);
             this.bdgNav.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

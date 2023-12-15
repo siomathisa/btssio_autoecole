@@ -23,13 +23,19 @@ namespace autoecoleEF
 
         private void FrmValiderLecon_Load(object sender, EventArgs e)
         {
-
+            ToolTip toolTip1 = new ToolTip();
+            toolTip1.SetToolTip(this.btnEnregistrer, "Valider la leçon");
         }
 
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
             this.mesDonneesEF.SaveChanges();
             MessageBox.Show("Enregistrement validé :)");
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

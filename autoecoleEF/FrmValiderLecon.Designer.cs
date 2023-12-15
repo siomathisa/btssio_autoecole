@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bdgSvehicule = new System.Windows.Forms.BindingSource(this.components);
-            this.bdgSlecon = new System.Windows.Forms.BindingSource(this.components);
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEleveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +37,8 @@
             this.dureeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.effectueeOuiNonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.numImmaVehiculeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bdgSvehicule = new System.Windows.Forms.BindingSource(this.components);
+            this.bdgSlecon = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgSvehicule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgSlecon)).BeginInit();
@@ -56,27 +56,20 @@
             this.effectueeOuiNonDataGridViewTextBoxColumn,
             this.numImmaVehiculeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bdgSlecon;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(70, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(643, 224);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // bdgSvehicule
-            // 
-            this.bdgSvehicule.DataSource = typeof(autoecoleEF.vehicule);
-            // 
-            // bdgSlecon
-            // 
-            this.bdgSlecon.DataSource = typeof(autoecoleEF.lecon);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnEnregistrer
             // 
-            this.btnEnregistrer.BackColor = System.Drawing.Color.PapayaWhip;
-            this.btnEnregistrer.Location = new System.Drawing.Point(283, 263);
+            this.btnEnregistrer.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEnregistrer.Location = new System.Drawing.Point(330, 314);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(119, 38);
             this.btnEnregistrer.TabIndex = 1;
-            this.btnEnregistrer.Text = "Enregistrer";
+            this.btnEnregistrer.Text = "Valider";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
             this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
             // 
@@ -125,14 +118,24 @@
             this.numImmaVehiculeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.numImmaVehiculeDataGridViewTextBoxColumn.ValueMember = "numImma";
             // 
+            // bdgSvehicule
+            // 
+            this.bdgSvehicule.DataSource = typeof(autoecoleEF.vehicule);
+            // 
+            // bdgSlecon
+            // 
+            this.bdgSlecon.DataSource = typeof(autoecoleEF.lecon);
+            // 
             // FrmValiderLecon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmValiderLecon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmValiderLecon";
             this.Load += new System.EventHandler(this.FrmValiderLecon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

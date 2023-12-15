@@ -40,13 +40,15 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.cmbHeure = new System.Windows.Forms.ComboBox();
+            this.bdgLecon = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bdgEleve)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgLecon)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(201, 71);
+            this.label1.Location = new System.Drawing.Point(257, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 0;
@@ -55,7 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(205, 95);
+            this.label2.Location = new System.Drawing.Point(261, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 1;
@@ -64,7 +66,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(199, 124);
+            this.label3.Location = new System.Drawing.Point(255, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 2;
@@ -73,12 +75,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(199, 152);
+            this.label4.Location = new System.Drawing.Point(255, 216);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Durée";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // cmbEleve
             // 
@@ -86,7 +87,7 @@
             this.cmbEleve.DataSource = this.bdgEleve;
             this.cmbEleve.DisplayMember = "nom";
             this.cmbEleve.FormattingEnabled = true;
-            this.cmbEleve.Location = new System.Drawing.Point(241, 68);
+            this.cmbEleve.Location = new System.Drawing.Point(297, 132);
             this.cmbEleve.Name = "cmbEleve";
             this.cmbEleve.Size = new System.Drawing.Size(121, 21);
             this.cmbEleve.TabIndex = 4;
@@ -97,7 +98,7 @@
             // 
             // dtLecon
             // 
-            this.dtLecon.Location = new System.Drawing.Point(241, 95);
+            this.dtLecon.Location = new System.Drawing.Point(297, 159);
             this.dtLecon.Name = "dtLecon";
             this.dtLecon.Size = new System.Drawing.Size(200, 20);
             this.dtLecon.TabIndex = 5;
@@ -105,7 +106,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(241, 148);
+            this.radioButton1.Location = new System.Drawing.Point(297, 212);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(75, 17);
             this.radioButton1.TabIndex = 6;
@@ -116,7 +117,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(332, 148);
+            this.radioButton2.Location = new System.Drawing.Point(388, 212);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(85, 17);
             this.radioButton2.TabIndex = 7;
@@ -126,27 +127,32 @@
             // 
             // btnEnregistrer
             // 
-            this.btnEnregistrer.Location = new System.Drawing.Point(241, 186);
+            this.btnEnregistrer.Location = new System.Drawing.Point(297, 250);
             this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(104, 21);
+            this.btnEnregistrer.Size = new System.Drawing.Size(133, 37);
             this.btnEnregistrer.TabIndex = 8;
-            this.btnEnregistrer.Text = "Enregistrer";
+            this.btnEnregistrer.Text = "Ajouter";
             this.btnEnregistrer.UseVisualStyleBackColor = true;
             this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
             // 
             // cmbHeure
             // 
             this.cmbHeure.FormattingEnabled = true;
-            this.cmbHeure.Location = new System.Drawing.Point(241, 121);
+            this.cmbHeure.Location = new System.Drawing.Point(297, 185);
             this.cmbHeure.Name = "cmbHeure";
             this.cmbHeure.Size = new System.Drawing.Size(121, 21);
             this.cmbHeure.TabIndex = 9;
+            // 
+            // bdgLecon
+            // 
+            this.bdgLecon.DataSource = typeof(autoecoleEF.lecon);
             // 
             // FrmAjouterLecon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.cmbHeure);
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.radioButton2);
@@ -158,9 +164,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmAjouterLecon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGererLecon";
             this.Load += new System.EventHandler(this.FrmAjouterLecon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bdgEleve)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgLecon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +187,6 @@
         private System.Windows.Forms.Button btnEnregistrer;
         private System.Windows.Forms.ComboBox cmbHeure;
         private System.Windows.Forms.BindingSource bdgEleve;
+        private System.Windows.Forms.BindingSource bdgLecon;
     }
 }

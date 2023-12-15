@@ -62,5 +62,10 @@ namespace autoecoleEF
             f.MdiParent = this;
             f.Show();
         }
+
+        private void fichierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

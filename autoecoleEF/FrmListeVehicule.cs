@@ -22,13 +22,19 @@ namespace autoecoleEF
 
         private void FrmListeVehicule_Load(object sender, EventArgs e)
         {
-
+            ToolTip toolTip1 = new ToolTip();
+            toolTip1.SetToolTip(this.btnEnregistrer, "Enregistrer les changements");
         }
 
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
             this.bdgVehicules.EndEdit();
             this.mesDonneesEF.SaveChanges();
+        }
+
+        private void dgvVehicule_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

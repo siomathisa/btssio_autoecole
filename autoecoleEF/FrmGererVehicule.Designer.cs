@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNum = new System.Windows.Forms.TextBox();
-            this.bdgSourceVehicule = new System.Windows.Forms.BindingSource(this.components);
             this.txtModele = new System.Windows.Forms.TextBox();
             this.txtCouleur = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -52,15 +51,16 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.Enregistrer = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceVehicule)).BeginInit();
+            this.bdgSourceVehicule = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bdgNav)).BeginInit();
             this.bdgNav.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceVehicule)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(99, 76);
+            this.label1.Location = new System.Drawing.Point(286, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 0;
@@ -69,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(101, 102);
+            this.label2.Location = new System.Drawing.Point(288, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 1;
@@ -78,7 +78,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(100, 128);
+            this.label3.Location = new System.Drawing.Point(287, 215);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 2;
@@ -87,20 +87,16 @@
             // txtNum
             // 
             this.txtNum.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceVehicule, "numImma", true));
-            this.txtNum.Location = new System.Drawing.Point(155, 73);
+            this.txtNum.Location = new System.Drawing.Point(342, 160);
             this.txtNum.Name = "txtNum";
             this.txtNum.ReadOnly = true;
             this.txtNum.Size = new System.Drawing.Size(100, 20);
             this.txtNum.TabIndex = 3;
             // 
-            // bdgSourceVehicule
-            // 
-            this.bdgSourceVehicule.DataSource = typeof(autoecoleEF.vehicule);
-            // 
             // txtModele
             // 
             this.txtModele.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceVehicule, "modele", true));
-            this.txtModele.Location = new System.Drawing.Point(155, 99);
+            this.txtModele.Location = new System.Drawing.Point(342, 186);
             this.txtModele.Name = "txtModele";
             this.txtModele.ReadOnly = true;
             this.txtModele.Size = new System.Drawing.Size(100, 20);
@@ -109,7 +105,7 @@
             // txtCouleur
             // 
             this.txtCouleur.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceVehicule, "couleur", true));
-            this.txtCouleur.Location = new System.Drawing.Point(155, 125);
+            this.txtCouleur.Location = new System.Drawing.Point(342, 212);
             this.txtCouleur.Name = "txtCouleur";
             this.txtCouleur.ReadOnly = true;
             this.txtCouleur.Size = new System.Drawing.Size(100, 20);
@@ -118,7 +114,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(208, 170);
+            this.radioButton1.Location = new System.Drawing.Point(395, 257);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(47, 17);
             this.radioButton1.TabIndex = 6;
@@ -129,7 +125,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(116, 170);
+            this.checkBox1.Location = new System.Drawing.Point(303, 257);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(48, 17);
             this.checkBox1.TabIndex = 7;
@@ -139,6 +135,7 @@
             // bdgNav
             // 
             this.bdgNav.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bdgNav.BackColor = System.Drawing.Color.LightSteelBlue;
             this.bdgNav.BindingSource = this.bdgSourceVehicule;
             this.bdgNav.CountItem = this.bindingNavigatorCountItem;
             this.bdgNav.DeleteItem = null;
@@ -162,7 +159,7 @@
             this.bdgNav.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bdgNav.Name = "bdgNav";
             this.bdgNav.PositionItem = this.bindingNavigatorPositionItem;
-            this.bdgNav.Size = new System.Drawing.Size(800, 25);
+            this.bdgNav.Size = new System.Drawing.Size(784, 25);
             this.bdgNav.TabIndex = 8;
             this.bdgNav.Text = "bindingNavigator1";
             // 
@@ -266,11 +263,16 @@
             this.Enregistrer.Text = "Enregistrer";
             this.Enregistrer.Click += new System.EventHandler(this.Enregistrer_Click);
             // 
+            // bdgSourceVehicule
+            // 
+            this.bdgSourceVehicule.DataSource = typeof(autoecoleEF.vehicule);
+            // 
             // FrmGererVehicule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.bdgNav);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.radioButton1);
@@ -281,12 +283,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmGererVehicule";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGererVehicule";
             this.Load += new System.EventHandler(this.FrmGererVehicule_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceVehicule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgNav)).EndInit();
             this.bdgNav.ResumeLayout(false);
             this.bdgNav.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceVehicule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

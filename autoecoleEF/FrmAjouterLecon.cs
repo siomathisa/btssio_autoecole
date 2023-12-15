@@ -22,6 +22,7 @@ namespace autoecoleEF
                 this.cmbHeure.Items.Add(i);
             }
             this.bdgEleve.DataSource = mesDonneesEF.eleve.ToList();
+            this.bdgLecon.DataSource = mesDonneesEF.lecon.ToList();
         }
         private int newNumLecon()
         {
@@ -51,21 +52,17 @@ namespace autoecoleEF
             return l;
         }
 
-        private void FrmAjouterLecon_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
             this.mesDonneesEF.lecon.Add(nouvelleLecon());
             this.mesDonneesEF.SaveChanges();
             MessageBox.Show("Enregistrement validé :)");
+        }
+
+        private void FrmAjouterLecon_Load(object sender, EventArgs e)
+        {
+            ToolTip toolTip1 = new ToolTip();
+            toolTip1.SetToolTip(this.btnEnregistrer, "Ajouter la leçon");
         }
     }
 }

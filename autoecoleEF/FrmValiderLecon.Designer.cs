@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnEnregistrer = new System.Windows.Forms.Button();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEleveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.heureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +38,7 @@
             this.numImmaVehiculeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bdgSvehicule = new System.Windows.Forms.BindingSource(this.components);
             this.bdgSlecon = new System.Windows.Forms.BindingSource(this.components);
+            this.btnEnregistrer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgSvehicule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgSlecon)).BeginInit();
@@ -47,6 +47,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dateDataGridViewTextBoxColumn,
@@ -61,17 +62,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(643, 224);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btnEnregistrer
-            // 
-            this.btnEnregistrer.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEnregistrer.Location = new System.Drawing.Point(330, 314);
-            this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(119, 38);
-            this.btnEnregistrer.TabIndex = 1;
-            this.btnEnregistrer.Text = "Valider";
-            this.btnEnregistrer.UseVisualStyleBackColor = false;
-            this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -125,6 +115,17 @@
             // bdgSlecon
             // 
             this.bdgSlecon.DataSource = typeof(autoecoleEF.lecon);
+            // 
+            // btnEnregistrer
+            // 
+            this.btnEnregistrer.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEnregistrer.Location = new System.Drawing.Point(330, 314);
+            this.btnEnregistrer.Name = "btnEnregistrer";
+            this.btnEnregistrer.Size = new System.Drawing.Size(119, 38);
+            this.btnEnregistrer.TabIndex = 1;
+            this.btnEnregistrer.Text = "Valider";
+            this.btnEnregistrer.UseVisualStyleBackColor = false;
+            this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
             // 
             // FrmValiderLecon
             // 

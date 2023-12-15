@@ -43,6 +43,7 @@
             // dgvVehicule
             // 
             this.dgvVehicule.AutoGenerateColumns = false;
+            this.dgvVehicule.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvVehicule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVehicule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numImmaDataGridViewTextBoxColumn,
@@ -93,7 +94,7 @@
             // 
             // btnEnregistrer
             // 
-            this.btnEnregistrer.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEnregistrer.BackColor = System.Drawing.SystemColors.Control;
             this.btnEnregistrer.Location = new System.Drawing.Point(335, 259);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(119, 31);

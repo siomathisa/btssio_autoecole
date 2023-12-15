@@ -37,6 +37,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNum = new System.Windows.Forms.TextBox();
+            this.bdgSourceEleve = new System.Windows.Forms.BindingSource(this.components);
             this.txtNom = new System.Windows.Forms.TextBox();
             this.txtPrenom = new System.Windows.Forms.TextBox();
             this.txtAdresse = new System.Windows.Forms.TextBox();
@@ -55,10 +56,9 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.bdgSourceEleve = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgNav)).BeginInit();
             this.bdgNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -123,6 +123,10 @@
             this.txtNum.ReadOnly = true;
             this.txtNum.Size = new System.Drawing.Size(100, 20);
             this.txtNum.TabIndex = 6;
+            // 
+            // bdgSourceEleve
+            // 
+            this.bdgSourceEleve.DataSource = typeof(autoecoleEF.eleve);
             // 
             // txtNom
             // 
@@ -195,6 +199,7 @@
             this.bdgNav.Size = new System.Drawing.Size(784, 25);
             this.bdgNav.TabIndex = 16;
             this.bdgNav.Text = "bindingNavigator1";
+            this.bdgNav.RefreshItems += new System.EventHandler(this.bdgNav_RefreshItems);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -294,10 +299,6 @@
             this.toolStripButton1.Text = "Enregistrer";
             this.toolStripButton1.Click += new System.EventHandler(this.Enregistrer_Click);
             // 
-            // bdgSourceEleve
-            // 
-            this.bdgSourceEleve.DataSource = typeof(autoecoleEF.eleve);
-            // 
             // FrmGererEleve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,10 +322,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "0.";
             this.Load += new System.EventHandler(this.FrmGererEleve_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgNav)).EndInit();
             this.bdgNav.ResumeLayout(false);
             this.bdgNav.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

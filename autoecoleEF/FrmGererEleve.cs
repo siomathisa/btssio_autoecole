@@ -107,5 +107,10 @@ namespace autoecoleEF
         {
             checkedChangeEleve();
         }
+
+        private void bdgNav_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
     }
 }

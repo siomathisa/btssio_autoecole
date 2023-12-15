@@ -127,12 +127,13 @@
             // 
             // btnEnregistrer
             // 
+            this.btnEnregistrer.BackColor = System.Drawing.SystemColors.Control;
             this.btnEnregistrer.Location = new System.Drawing.Point(297, 250);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(133, 37);
             this.btnEnregistrer.TabIndex = 8;
             this.btnEnregistrer.Text = "Ajouter";
-            this.btnEnregistrer.UseVisualStyleBackColor = true;
+            this.btnEnregistrer.UseVisualStyleBackColor = false;
             this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
             // 
             // cmbHeure
